@@ -119,7 +119,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="battlenet.ico" />
-    <None Include="steam.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
