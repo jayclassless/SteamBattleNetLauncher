@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Steam Battle.Net Launcher")]
-[assembly: AssemblyDescription("A launcher for Battle.Net games that enabled the Steam overlay.")]
+[assembly: AssemblyDescription("A launcher for Battle.Net games that enables the Steam overlay.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("classless.net")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Steam Battle.Net Launcher")]
-[assembly: AssemblyCopyright("Copyright © classless.net 2016")]
+[assembly: AssemblyCopyright("Copyright © 2016 Jason Simeone")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
