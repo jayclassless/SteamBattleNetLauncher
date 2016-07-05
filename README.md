@@ -29,17 +29,18 @@ This application allows you to launch Battle.Net games through Steam so that:
 
 ## Caveats
 This was slapped together rather quick based on various Visual Basic Scripts I've seen floating around the internet. It's
-likely buggy, so any bug reports or patches you can provide to improve this application, the better!
+likely buggy, so any bug reports or patches you can provide to improve this application, the better! See the following
+table for the current known support for the launcher.
 
-## Game Codes
-Code | Game
----- | ----
-D3   | Diablo 3
-HERO | Heroes of the Storm
-PRO  | Overwatch
-S2   | Starcraft 2
-WOW  | World of Warcraft
-WTCG | Hearthstone
+## Games
+Game | Code | Launcher Support
+---- | ---- | ----------------
+Diablo 3 | D3 | Untested
+Heroes of the Storm | HERO | Game launches, Status updated, No Overlay
+Overwatch | PRO | Game launches, Status updated, Overlay works
+Starcraft 2 | S2 | Untested
+World of Warcraft | WOW | Untested
+Hearthstone | WTCG | Status updated, Game frozen on launch
 
 ## License and Copyrights
 The code in this repository is released under the MIT license.
