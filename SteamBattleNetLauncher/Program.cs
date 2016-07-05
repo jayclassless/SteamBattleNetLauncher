@@ -98,6 +98,10 @@ namespace SteamBattleNetLauncher {
             statusWindow.UpdateStatus("Game arguments: {0}", process.StartInfo.Arguments);
 
             // Kill the game that was started by Battle.Net.
+            if (gameToken == "Hero") {
+                // This is hacky, but if we kill Heroes of the Storm too fast, it complains.
+                Thread.Sleep(3000);
+            }
             Process.GetProcessById(gameProcessId).Kill();
             statusWindow.UpdateStatus("Cleaned up analysis.");
 
