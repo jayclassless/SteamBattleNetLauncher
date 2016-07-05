@@ -38,15 +38,14 @@
             this.txtStatus.Multiline = true;
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.ReadOnly = true;
-            this.txtStatus.Size = new System.Drawing.Size(380, 119);
+            this.txtStatus.Size = new System.Drawing.Size(380, 125);
             this.txtStatus.TabIndex = 0;
-            this.txtStatus.WordWrap = false;
             // 
             // FrmStatus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 143);
+            this.ClientSize = new System.Drawing.Size(404, 149);
             this.ControlBox = false;
             this.Controls.Add(this.txtStatus);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
