@@ -36,11 +36,11 @@ table for the current known support for the launcher.
 Game | Code | Launcher Support
 ---- | ---- | ----------------
 Diablo 3 | D3 | Untested
-Heroes of the Storm | HERO | Game launches, Status updated, No Overlay
+Heroes of the Storm | HERO | Game launches, No Status, No Overlay
 Overwatch | PRO | Game launches, Status updated, Overlay works
 Starcraft 2 | S2 | Untested
 World of Warcraft | WOW | Untested
-Hearthstone | WTCG | Status updated, Game frozen on launch
+Hearthstone | WTCG | Game launches, Status updated, Overlay works
 
 ## License and Copyrights
 The code in this repository is released under the MIT license.

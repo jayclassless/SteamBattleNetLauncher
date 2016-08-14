@@ -157,6 +157,7 @@ namespace SteamBattleNetLauncher {
                     startInfo = new ProcessStartInfo();
 
                     startInfo.FileName = result["ExecutablePath"].ToString();
+                    startInfo.WorkingDirectory = System.IO.Path.GetDirectoryName(startInfo.FileName);
 
                     string commandLine = result["CommandLine"].ToString();
                     int trimLength = startInfo.FileName.Length;
