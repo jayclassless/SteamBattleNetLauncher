@@ -52,30 +52,10 @@ namespace SteamBattleNetLauncher {
             }
             statusWindow.UpdateStatus("Found Battle.Net Process: {0}", battleNetProcessID);
 
-            // Make sure the Helpers are running.
-            int numHelpers = GetHelperCount(battleNetProcessID),
-                timeWaited = 0;
-            while ((numHelpers < 2) && (timeWaited < PROCESS_WAIT_LIMIT)) {
-                Thread.Sleep(PROCESS_WAIT_INCREMENT);
-                timeWaited += PROCESS_WAIT_INCREMENT;
-                numHelpers = GetHelperCount(battleNetProcessID);
-            }
-            if (numHelpers < 2) {
-                MessageBox.Show(
-                    "The Battle.Net Helper processes could not be found. Try completely shutting down Battle.Net and try again.",
-                    appTitle,
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error
-                );
-                return;
-            }
-            statusWindow.UpdateStatus("Found Battle.Net Helpers.");
-
             // Make Battle.Net start the game.
             statusWindow.UpdateStatus("Analyzing game launch information...");
             Process.Start(String.Format("battlenet://{0}", gameToken));
-            int gameProcessId = 0;
-            timeWaited = 0;
+            int gameProcessId = 0, timeWaited = 0;
             while ((gameProcessId == 0) && (timeWaited < PROCESS_WAIT_LIMIT)) {
                 gameProcessId = GetGameProcessID(battleNetProcessID);
                 Thread.Sleep(PROCESS_WAIT_INCREMENT);
@@ -120,17 +100,6 @@ namespace SteamBattleNetLauncher {
             }
 
             return 0;
-        }
-
-        private static int GetHelperCount(int battleNetProcessID) {
-            string query = String.Format(
-                "SELECT ProcessId FROM Win32_Process WHERE Name = 'Battle.net Helper.exe' AND ParentProcessId = {0}",
-                battleNetProcessID
-            );
-
-            using (var mos = new ManagementObjectSearcher(query)) {
-                return mos.Get().Count;
-            }
         }
 
         private static int GetGameProcessID(int battleNetProcessID) {
