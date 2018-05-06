@@ -36,6 +36,7 @@ table for the current known support for the launcher.
 Game | Code | Launcher Support
 ---- | ---- | ----------------
 Diablo 3 | D3 | Game launches, Status updated, Overlay works
+Destiny 2 | DST2 | Untested
 Heroes of the Storm | HERO | Game launches, No Status, No Overlay
 Overwatch | PRO | Game launches, Status updated, Overlay works
 Starcraft 2 | S2 | Untested
