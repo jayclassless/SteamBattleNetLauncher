@@ -13,11 +13,9 @@ namespace SteamBattleNetLauncher {
             {"DST2", new string[]{"DST2", "Destiny 2"}},
             {"HERO", new string[]{"Hero", "Heroes of the Storm"}},
             {"PRO", new string[]{"Pro", "Overwatch"}},
-            {"S1", new string[]{"S1", "Starcraft"}},
             {"S2", new string[]{"S2", "Starcraft 2"}},
             {"WOW", new string[]{"WoW", "World of Warcraft"}},
             {"WTCG", new string[]{"WTCG", "Hearthstone"}},
-            {"VIPR", new string[]{ "VIPR", "Call of Duty: Black Ops 4"}},
         };
 
         static int PROCESS_WAIT_LIMIT = 10000;
@@ -51,15 +49,13 @@ namespace SteamBattleNetLauncher {
             int battleNetProcessID = GetBattleNetProcessID();
             if (battleNetProcessID == 0) {
                 statusWindow.UpdateStatus("Battle.Net not running, starting it...");
-                battleNetProcessID = Process.Start("battlenet://").Id;
+                Process.Start("battlenet://");
             }
             statusWindow.UpdateStatus("Found Battle.Net Process: {0}", battleNetProcessID);
-            string battleNetPath = GetBattleNetPath(battleNetProcessID);
-            statusWindow.UpdateStatus("Found Battle.Net Path: {0}", battleNetPath);
 
             // Make Battle.Net start the game.
             statusWindow.UpdateStatus("Analyzing game launch information...");
-            Process.Start(battleNetPath, String.Format("--exec=\"launch {0}\"", gameToken));
+            Process.Start(String.Format("battlenet://{0}", gameToken));
             int gameProcessId = 0, timeWaited = 0;
             while ((gameProcessId == 0) && (timeWaited < PROCESS_WAIT_LIMIT)) {
                 gameProcessId = GetGameProcessID(battleNetProcessID);
@@ -105,19 +101,6 @@ namespace SteamBattleNetLauncher {
             }
 
             return 0;
-        }
-
-        public static string GetBattleNetPath(int battleNetProcessID) {
-            string query = String.Format("SELECT ExecutablePath FROM Win32_process WHERE ProcessId = {0}", battleNetProcessID);
-
-            using (var mos = new ManagementObjectSearcher(query)) {
-                foreach (var result in mos.Get())
-                {
-                    return Convert.ToString(result["ExecutablePath"]);
-                }
-            }
-
-            return null;
         }
 
         private static int GetGameProcessID(int battleNetProcessID) {

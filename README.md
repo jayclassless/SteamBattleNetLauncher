@@ -42,7 +42,6 @@ Overwatch | PRO | Game launches, Status updated, Overlay works
 Starcraft 2 | S2 | Untested
 World of Warcraft | WOW | Untested
 Hearthstone | WTCG | Game launches, Status updated, Overlay works
-Call of Duty: Black Ops 4 | VIPR | Untested
 
 ## License and Copyrights
 The code in this repository is released under the MIT license.
