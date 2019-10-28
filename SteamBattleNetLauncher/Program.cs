@@ -10,7 +10,6 @@ namespace SteamBattleNetLauncher {
     static class Program {
         static Dictionary<string, string[]> GAME_TOKEN_MAP = new Dictionary<string, string[]>(){
             {"D3", new string[]{"D3", "Diablo 3"}},
-            {"DST2", new string[]{"DST2", "Destiny 2"}},
             {"HERO", new string[]{"Hero", "Heroes of the Storm"}},
             {"PRO", new string[]{"Pro", "Overwatch"}},
             {"S1", new string[]{"S1", "Starcraft"}},
@@ -18,6 +17,7 @@ namespace SteamBattleNetLauncher {
             {"WOW", new string[]{"WoW", "World of Warcraft"}},
             {"WTCG", new string[]{"WTCG", "Hearthstone"}},
             {"VIPR", new string[]{ "VIPR", "Call of Duty: Black Ops 4"}},
+            {"ODIN", new string[]{ "ODIN", "Call of Duty: Modern Warfare (2019)"}}
         };
 
         static int PROCESS_WAIT_LIMIT = 10000;
