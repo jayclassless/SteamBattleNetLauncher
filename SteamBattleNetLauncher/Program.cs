@@ -9,15 +9,23 @@ using System.Text;
 namespace SteamBattleNetLauncher {
     static class Program {
         static Dictionary<string, string[]> GAME_TOKEN_MAP = new Dictionary<string, string[]>(){
-            {"D3", new string[]{"D3", "Diablo 3"}},
+            {"RTRO", new string[]{"RTRO", "Blizzard Arcade Collection"}},
+            {"OSI", new string[]{"OSI", "Diablo II: Resurrected"}},
+            {"D3", new string[]{"D3", "Diablo III"}},
+            {"WTCG", new string[]{"WTCG", "Hearthstone"}},
             {"HERO", new string[]{"Hero", "Heroes of the Storm"}},
             {"PRO", new string[]{"Pro", "Overwatch"}},
             {"S1", new string[]{"S1", "Starcraft"}},
             {"S2", new string[]{"S2", "Starcraft 2"}},
+            {"W3", new string[]{"W3", "Warcraft III: Reforged"}},
             {"WOW", new string[]{"WoW", "World of Warcraft"}},
-            {"WTCG", new string[]{"WTCG", "Hearthstone"}},
-            {"VIPR", new string[]{ "VIPR", "Call of Duty: Black Ops 4"}},
-            {"ODIN", new string[]{ "ODIN", "Call of Duty: Modern Warfare (2019)"}}
+            {"WoWC", new string[]{"WoWC", "World of Warcraft Classic + BC"}},
+            {"ZEUS", new string[]{"ZEUS", "Call of Duty: Black Ops - Cold War"}},
+            {"VIPR", new string[]{"VIPR", "Call of Duty: Black Ops 4"}},
+            {"ODIN", new string[]{"ODIN", "Call of Duty: MW 2019"}},
+            {"LAZR", new string[]{"LAZR", "Call of Duty: MW 2 Campaign Remastered"}},
+            {"FORE", new string[]{"FORE", "Call of Duty: Vanguard"}},
+            {"WLBY", new string[]{"WLBY", "Crash Bandicoot 4: It's About Time"}},
         };
 
         static int PROCESS_WAIT_LIMIT = 10000;
