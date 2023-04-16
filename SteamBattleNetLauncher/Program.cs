@@ -12,6 +12,7 @@ namespace SteamBattleNetLauncher {
             {"RTRO", new string[]{"RTRO", "Blizzard Arcade Collection"}},
             {"OSI", new string[]{"OSI", "Diablo II: Resurrected"}},
             {"D3", new string[]{"D3", "Diablo III"}},
+            {"D4", new string[]{"D4", "Diablo IV"}},
             {"WTCG", new string[]{"WTCG", "Hearthstone"}},
             {"HERO", new string[]{"Hero", "Heroes of the Storm"}},
             {"PRO", new string[]{"Pro", "Overwatch"}},
