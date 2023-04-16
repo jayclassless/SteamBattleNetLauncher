@@ -37,6 +37,7 @@ Game | Code | Launcher Support
 ---- | ---- | ----------------
 Diablo II: Resurrected | OSI | Untested
 Diablo III | D3 | Game launches, Status updated, Overlay works
+Diablo IV | D4 | Untested
 Hearthstone | WTCG | Game launches, Status updated, Overlay works
 Heroes of the Storm | HERO | Game launches, No Status, No Overlay
 Overwatch | PRO | Game launches, Status updated, Overlay works
